@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="style.css">
+    
+	<title>Login Form</title>
+</head>
+<body>
+	<div class="container" id="container">
+		<div class="form-container log-in-container">
+			<form class="type_2" method="post" id="registerform" action="<?php echo $path; ?>customer_registration.php" enctype="multipart/form-data">
+                <section id="showregister" class="section_offset">
+				<h1>Create New Account</h1>
+				
+				<input type="name" for="name" placeholder="Name" />
+                <!-- <span id="errorfname" class="hide">Please Type your Name</span> -->
+
+                <input type="email" for="email" placeholder="Email" />
+                <!-- <span id="erroremail" class="hide">Please type your valid email address</span> -->
+
+                <input type="number" for="mobile" placeholder="Phone Number" />
+                <!-- <span id="errormobile" class="hide">Please type your 10 digit mobile no.</span> -->
+
+                <input type="homeaddress" for="homeaddress" placeholder="Home Address" />
+                <!-- <span id="errorhomeaddress" class="hide">Please Type your Home Address</span> -->
+
+				<input type="password" for="password1" placeholder="Password" />
+                <!-- <span id="errorfname1" class="hide">Please type your 6 to 12 Characters Password</span> -->
+
+                <input type="password" for="password2" placeholder="cPassword" />
+                <!-- <span id="errorfname2" class="hide">Password Mismatch!</span> -->
+
+				<button for="submit" id="submit">SIGN UP</button>
+                </section>
+			</form>
+		</div>
+		<div class="overlay-container">
+			<div class="overlay">
+				<div class="overlay-panel overlay-right">
+					<h1>Website Name</h1>
+				</div>
+			</div>
+		</div>
+	</div>
+   
+    <script src="regscript.js" async></script>
+
+</body>
+</html>

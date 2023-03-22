@@ -1,0 +1,181 @@
+:root{
+    --color-1: #5EA23A;
+  }
+  body{
+      line-height: 1.5;
+      font-family: sans-serif;
+  }
+  *{
+      box-sizing: border-box;
+      margin:0;
+      padding:0;
+  }
+  a{
+      text-decoration: none;
+  }
+  ul{
+      list-style: none;
+  }
+  .container{
+      max-width: 1170px;
+      margin: auto;
+  }
+  .row{
+      display: flex;
+      flex-wrap: wrap;
+  }
+  .align-items-center{
+      align-items: center;
+  }
+  .justify-content-between{
+      justify-content: space-between;
+  }
+  /*header*/
+  .header{
+      background-color: white;
+      padding:12px 0;
+      position: relative;
+      box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+  }
+  .header .logo,
+  .header .nav{
+      padding:0 15px;
+  }
+  .header .logo a{
+      font-size: 30px;
+      color: #000000;
+      text-transform: capitalize;
+  }
+  .header .nav ul li{
+      display: inline-block;
+      margin-left: 40px;
+  }
+  .header .nav ul li a{
+      display: block;
+      font-size: 20px;
+      padding:10px 0;
+      color: rgba(0, 0, 0, 0.7);
+      text-transform: capitalize;
+      transition: all 0.5s ease;
+  }
+  .header .nav ul li a:hover,
+  .header .nav ul li a.active{
+      color: #5EA23A;
+  }
+  .header #nav-check{
+      position: absolute;
+      opacity:0;
+      pointer-events: none;
+  }
+  .nav-toggler{
+      height: 34px;
+      width: 44px;
+      background-color: #ffffff;
+      border-radius: 4px;
+      cursor: pointer;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      margin-right: 15px;
+  }
+  .nav-toggler span{
+      display: block;
+      height: 2px;
+      width: 20px;
+      background-color: var(--color-1);
+      position: relative;
+  }
+  .nav-toggler span::before,
+  .nav-toggler span::after{
+     content: '';
+     position: absolute;
+     width: 100%;
+     height: 100%;
+     background-color: var(--color-1);
+     left:0;
+  }
+  .nav-toggler span::before{
+      top: -6px;
+  }
+  .nav-toggler span::after{
+      top: 6px;
+  }
+  
+  @media(max-width: 991px){
+      .nav-toggler{
+          display: flex;
+      }
+      .header .nav{
+          position: absolute;
+          left:0;
+          top:100%;
+          width: 100%;
+          background-color: white;
+          border-top: 1px solid rgba(255,255,255,0.2);
+          opacity:0;
+          visibility: hidden;
+      }
+      .header .nav ul li{
+          display: block;
+          margin:0;
+      }
+      .header #nav-check:checked ~ .nav{
+         opacity: 1;
+         visibility: visible;
+      }
+     
+      .header #nav-check:checked ~ .nav-toggler span{
+          background-color: transparent;
+      }
+      .header #nav-check:checked ~ .nav-toggler span::before{
+          top:0;
+          transform: rotate(45deg);
+      }
+      .header #nav-check:checked ~ .nav-toggler span::after{
+          top:0;
+          transform: rotate(-45deg);
+      }
+  }
+  
+/*login and register btn*/
+.btn{
+    padding: 30px;
+    margin: 20px;
+    padding-left: 500px;
+}
+.btn1{
+    padding: 10px;
+    margin: 10px;
+    margin-top: 1rem;
+    padding: 0.5rem 1.5rem;
+    background-color: rgb(49, 227, 49);
+    color: white;
+    font-size: 1rem;
+    border-radius: 4px;
+    border: none;
+    width: 150px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    margin-left: -140px;
+}
+.btn2{
+    padding: 10px;
+    margin: 10px;
+    margin-top: 1rem;
+    padding: 0.5rem 1.5rem;
+    background-color: rgb(49, 227, 49);
+    color: white;
+    font-size: 1rem;
+    border-radius: 4px;
+    border: none;
+    width: 150px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    margin-left: -140px;
+}
+.btn1:hover {
+    background-color: #022b14;
+  }
+  .btn2:hover {
+    background-color: #022b14;
+  }
